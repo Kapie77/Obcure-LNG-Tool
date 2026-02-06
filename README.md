@@ -105,7 +105,7 @@ python obscure_lng_tool.py build LANGUAGE.csv LANGUAGE.new.lng --game ob2 --add-
 ```
 
 ## How It Works
-Obscure 1
+### Obscure 1
 - Scans the .lng file for null-terminated strings
 - Preserves:
 - Original offsets
