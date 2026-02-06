@@ -52,7 +52,7 @@ Just **drag a file onto the executable or Python script**.
 
 ### 2️⃣ Command Line Interface (CLI)
 
-#### Extract – Obscure 1
+#### Obscure 1 — Extract:
 ```bash
 python obscure_lng_tool.py extract LANGUAGE.lng LANGUAGE --game ob1 --format csv
 ```
@@ -63,12 +63,15 @@ python obscure_lng_tool.py extract LANGUAGE.lng LANGUAGE --game ob1 --format txt
 python obscure_lng_tool.py extract LANGUAGE.lng LANGUAGE --game ob1 --format both
 ```
 
-#### Rebuild – Obscure 1
+#### Obscure 1 — Rebuild:
 ```bash
 python obscure_lng_tool.py build LANGUAGE.csv LANGUAGE.new.lng --game ob1 --original LANGUAGE.lng
 ```
+```bash
+python obscure_lng_tool.py build LANGUAGE.txt LANGUAGE.new.lng --game ob1 --original LANGUAGE.lng
+```
 
-#### Extract – Obscure 2
+#### Obscure 2 — Extract:
 ```bash
 python obscure_lng_tool.py extract LANGUAGE.lng LANGUAGE --game ob2 --format csv
 ```
@@ -79,9 +82,12 @@ python obscure_lng_tool.py extract LANGUAGE.lng LANGUAGE --game ob2 --format txt
 python obscure_lng_tool.py extract LANGUAGE.lng LANGUAGE --game ob2 --format both
 ```
 
-#### Rebuild – Obscure 2
+#### Obscure 2 — Rebuild:
 ```bash
 python obscure_lng_tool.py build LANGUAGE.csv LANGUAGE.new.lng --game ob2
+```
+```bash
+python obscure_lng_tool.py build LANGUAGE.txt LANGUAGE.new.lng --game ob2
 ```
 Optional null-terminator:
 ```
