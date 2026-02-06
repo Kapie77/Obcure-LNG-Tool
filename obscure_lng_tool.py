@@ -283,7 +283,7 @@ def build_ob1(csv_path, original_lng, output_lng, encoding='latin-1'):
             # aplica o mapa
             translated = map_text(translated, 'ob1')
 
-            encoded = translated.encode('cap1252', errors='replace') # IMPORTANTE: Obscure 1 usa encoding compatível com latin-1 / cp1252
+            encoded = translated.encode('cp1252', errors='replace') # IMPORTANTE: Obscure 1 usa encoding compatível com latin-1 / cp1252
 
             if len(encoded) > max_len:
                 encoded = encoded[:max_len]
@@ -523,4 +523,5 @@ if __name__ == '__main__':
         main_drag_drop()
     else:
         # Passou argumentos → CLI normal
+
         main()
