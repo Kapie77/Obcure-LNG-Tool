@@ -6,6 +6,7 @@ import sys
 import os
 import unicodedata
 import re
+import json
 
 # MAPAS DE SUBSTITUIÇÃO DE CARACTERES (se um caracter não funciona com acento vira uma letra normal, sem acento)
 # OBSCURE 1
@@ -324,8 +325,6 @@ def extract_ob1(lng_path, prefix, encoding='cp1252'):
                     'entryCount': entryCount
                 }
 
-                import json
-
                 with open(prefix + '.meta.json', 'w', encoding='utf-8') as mf:
                     json.dump(meta, mf, indent=2)
 
@@ -474,9 +473,8 @@ def extract_placeholders(text):
 
 # REPACK DO OBSCURE 1
 def build_ob1(csv_path, output_lng, encoding='cp1252'):
-    import json
 
-    meta_path = os.path.splitext(csv_path)[0] + '.meta.json'
+   meta_path = os.path.splitext(csv_path)[0] + '.meta.json'
     if not os.path.exists(meta_path):
         raise RuntimeError(".meta.json file not found")
 
@@ -783,5 +781,6 @@ if __name__ == '__main__':
         main_drag_drop()
     else:
         # Passou argumentos → CLI normal
+
 
         main()
